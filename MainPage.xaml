@@ -46,7 +46,6 @@
             <Entry
                 x:Name="PuntInteresEntry"
                 MaxLength="100"
-                Style="{StaticResource CommonEntryStyle}"
                 Text="" 
                 Placeholder="Nom punt interés"/>       
 
