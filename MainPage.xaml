@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrackingMarques.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="logo_montilivi_2015_vermell.png"
+                SemanticProperties.Description="Institut Montilivi"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="1r ASIX - 1r DAW 2022-2023"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="MP4 - Llenguatge de marques i sistemes de la informació"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="IniciBtn"
+                Text="Inici de la ruta"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="IniciBtn_Clicked"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="LabelPunts"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="10"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="PuntInteresBtn"
+                Text="Marcar punt d'interés"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="PuntInteresBtn_Clicked"
+                IsEnabled="False"
+                HorizontalOptions="Center" />
+            
+            <Entry
+                x:Name="PuntInteresEntry"
+                MaxLength="100"
+                Text="" 
+                Placeholder="Nom punt interés"/>       
+
+            <Button 
+                x:Name="FinalBtn"
+                Text="Final de la ruta"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="FinalBtn_Clicked"
+                IsEnabled="False"
+                HorizontalOptions="Center" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
