@@ -35,6 +35,13 @@
                 Clicked="IniciBtn_Clicked"
                 HorizontalOptions="Center" />
 
+            <Label
+                x:Name="LabelPunts"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="10"
+                HorizontalOptions="Center" />
+
             <Button
                 x:Name="PuntInteresBtn"
                 Text="Marcar punt d'interés"
