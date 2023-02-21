@@ -6,17 +6,21 @@ public partial class MainPage : ContentPage
 {
     XmlDocument doc { get; set; }
     XmlElement punts;
+    int numeroDePunts = 0;
     private CancellationTokenSource _cancelTokenSource;
 
     public MainPage()
     {
-        InitializeComponent();
+        numeroDePunts = 0;
         doc = new XmlDocument();
-
+        InitializeComponent();
+        LabelPunts.Text = $"Punts introduïts: 0";
     }
     private async void IniciBtn_Clicked(object sender, EventArgs e)
     {
         doc = new XmlDocument();
+        numeroDePunts = 0;
+        LabelPunts.Text = $"Punts introduïts: {numeroDePunts}";
         XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
         XmlElement root = doc.DocumentElement;
         doc.InsertBefore(xmlDeclaration, root);
@@ -90,8 +94,8 @@ public partial class MainPage : ContentPage
 
         XmlElement nom = doc.CreateElement(string.Empty, "nom", string.Empty);
         XmlText textNom = doc.CreateTextNode(nombre);
-       
-        
+
+
         nom.AppendChild(textNom);
         punt.AppendChild(nom);
         punt.AppendChild(latitut);
@@ -100,6 +104,8 @@ public partial class MainPage : ContentPage
         dataHora.AppendChild(textFecha);
         punt.AppendChild(dataHora);
         punts.AppendChild(punt);
+        numeroDePunts++;
+        LabelPunts.Text = $"Punts introduïts: {numeroDePunts}";
     }
 }
 
